@@ -1,4 +1,4 @@
-const port = 4000;
+const port = process.env.PORT || 4000;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -8,6 +8,10 @@ const path = require("path");
 const cors = require("cors");
 const { type } = require("os");
 const { error } = require("console");
+
+// In backend 
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/E-commarce";
+const JWT_SECRET = process.env.JWT_SECRET || "default_secret_ecom";
 
 app.use(express.json());
 app.use(cors())
