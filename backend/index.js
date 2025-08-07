@@ -12,6 +12,11 @@ const { error } = require("console");
 app.use(express.json());
 app.use(cors())
 
+// In backend (e.g., server.js)
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/E-commarce";
+const JWT_SECRET = process.env.JWT_SECRET || "default_secret_ecom";
+
+
 //database connection (mongodb)
 
 mongoose.connect("mongodb://127.0.0.1:27017/E-commarce")
