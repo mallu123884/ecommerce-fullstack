@@ -19,6 +19,6 @@ This repository contains the complete e-commerce solution with:
 4. `npx nodemon index.js`
 
 ### Admin Panel
-1. `cd admin-panel`
+1. `cd admin`
 2. `npm install`
 3. `npm run dev`
